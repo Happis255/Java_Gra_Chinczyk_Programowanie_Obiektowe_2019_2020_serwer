@@ -78,16 +78,19 @@ public class main {
             System.out.println(tab_g[i]);
         }
 
+        ObjectOutputStream tab_1[] = new ObjectOutputStream[liczba_graczy];
         /* Rozeslij wszystkim graczom informacje o wszystkich innych graczach */
         for (int i = 0; i < liczba_graczy; i++) {
 
             //ObjectInputStream dis = new ObjectInputStream(tab_s[i].getInputStream());
-            ObjectOutputStream dos = new ObjectOutputStream (tab_s[i].getOutputStream());
+            tab_1[i] = new ObjectOutputStream (tab_s[i].getOutputStream());
 
             /* Uruchom watek dla poszczegolnych graczy */
-            Thread t = new Client_SendPlayersData(tab_s[i], dos, tab_g);
+            Thread t = new Client_SendPlayersData(tab_s[i], tab_1[i], tab_g);
             t.start();
         }
+
+        m_count(3);
 
         String barwa_pola;
 
@@ -120,13 +123,15 @@ public class main {
             System.out.println(tab_p[i]);
         }
 
+        ObjectOutputStream tab_2[] = new ObjectOutputStream[liczba_graczy];
         /* Rozeslij wszystkim pola do graczy */
         for (int i = 0; i < liczba_graczy; i++) {
 
             //ObjectOutputStream dos_object = new ObjectOutputStream (tab_s[i].getOutputStream());
 
             /* Uruchom watek dla poszczegolnych graczy */
-            Thread t = new Client_SendBoardData(new ObjectOutputStream (tab_s[i].getOutputStream()), tab_p);
+            tab_2[i] = new ObjectOutputStream (tab_s[i].getOutputStream());
+            Thread t = new Client_SendBoardData(tab_s[i], tab_2[i], tab_p);
             t.start();
         }
     }
