@@ -1,5 +1,5 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java_pliki.Gracz;
+
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -18,12 +18,12 @@ public class Client_SendPlayersData extends Thread {
 
     /* Watek odpowiedzialny za nadanie graczowi numer */
     public void run() {
-        try {
-
-            for (int i = 0; i < 4; i++)
-                dos.writeObject(this.tablica_graczy[i]);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            for (int i = 0; i < 4; i++){
+                try {
+                    dos.writeObject(tablica_graczy[i]);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
     }
 }

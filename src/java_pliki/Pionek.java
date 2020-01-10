@@ -1,21 +1,27 @@
+package java_pliki;
+
 public class Pionek implements java.io.Serializable  {
+
+    public Pionek() {
+    }
+
     @Override
 
     public String toString() {
-        return "Pionek{ " +
+        return "java_pliki.Pionek{ " +
                 "numer pionka = " + numer_pionka +
-                ", kolor pionka = '" + kolor_pionka + '\'' +
+                ", kolor pionka = '" + nazwa_wlasciciela + '\'' +
                 ", numer pola = " + numer_pola +
                 " }";
     }
 
     private int numer_pionka;
-    private String kolor_pionka;
+    private String nazwa_wlasciciela;
     private int numer_pola;
 
     public Pionek(int a, String b, int c){
         numer_pionka = a;
-        kolor_pionka = b;
+        nazwa_wlasciciela = b;
         numer_pola = c;
     }
 
@@ -23,8 +29,8 @@ public class Pionek implements java.io.Serializable  {
         return numer_pionka;
     }
 
-    public String getKolor_pionka() {
-        return kolor_pionka;
+    public String getNazwa_wlasciciela() {
+        return nazwa_wlasciciela;
     }
 
     public void setNumer_pola(int numer_pola) {

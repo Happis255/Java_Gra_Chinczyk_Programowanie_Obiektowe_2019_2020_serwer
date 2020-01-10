@@ -1,5 +1,5 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java_pliki.Pola;
+
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -19,7 +19,9 @@ public class Client_SendBoardData extends Thread {
     /* Watek odpowiedzialny za nadanie graczowi numer */
     public void run() {
         try {
-            dos.writeObject(this.tablica_pol);
+            for (int i = 0; i < tablica_pol.length; i++){
+                dos.writeObject(tablica_pol[i]);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

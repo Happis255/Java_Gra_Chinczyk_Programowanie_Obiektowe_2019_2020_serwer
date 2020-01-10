@@ -1,6 +1,29 @@
+package java_pliki;
+
 public class Pola implements java.io.Serializable {
 
+    public Pola() {
+    }
+
     private String barwa_pola;
+    private int position_x;
+    private int position_y;
+
+    public int getPosition_x() {
+        return position_x;
+    }
+
+    public int getPosition_y() {
+        return position_y;
+    }
+
+    public void setPosition_x(int x) {
+        this.position_x = x;
+    }
+
+    public void setPosition_y(int y) {
+        this.position_y = y;
+    }
 
     public String getBarwa_pola() {
         return barwa_pola;
@@ -44,3 +67,4 @@ public class Pola implements java.io.Serializable {
                 " } ";
     }
 }
+
