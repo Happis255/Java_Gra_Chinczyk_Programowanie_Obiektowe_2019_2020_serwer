@@ -16,10 +16,10 @@ Język: Java
 
 ### Podgląd aplikacji
 ###### Odbieranie połączeń
-![Podgląd aplikacji](https://github.com/Happis255/Java_Gra_Chinczyk_Programowanie_Obiektowe_2019_2020_serwer/tree/master/Zdjecia/1.JPG)
+![Podgląd aplikacji](https://raw.githubusercontent.com/Happis255/Java_Gra_Chinczyk_Programowanie_Obiektowe_2019_2020_serwer/master/Zdjecia/1.JPG)
 
 ###### Generowanie i rozsyłanie pól
-![Podgląd aplikacji](https://github.com/Happis255/Java_Gra_Chinczyk_Programowanie_Obiektowe_2019_2020_serwer/tree/master/Zdjecia/2.JPG)
+![Podgląd aplikacji](https://raw.githubusercontent.com/Happis255/Java_Gra_Chinczyk_Programowanie_Obiektowe_2019_2020_serwer/master/Zdjecia/2.JPG)
 
 ###### Odczyt obiektów oraz losowanie liczby kostek
-![Podgląd aplikacji](https://github.com/Happis255/Java_Gra_Chinczyk_Programowanie_Obiektowe_2019_2020_serwer/tree/master/Zdjecia/3.JPG)
+![Podgląd aplikacji](https://raw.githubusercontent.com/Happis255/Java_Gra_Chinczyk_Programowanie_Obiektowe_2019_2020_serwer/master/Zdjecia/3.JPG)
